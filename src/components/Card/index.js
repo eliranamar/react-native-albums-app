@@ -29,5 +29,5 @@ export const Card = (props) => {
 };
 
 Card.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
 };
