@@ -20,7 +20,7 @@ const styles = {
 };
 
 export const Card = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <View style={styles.containerStyle}>
       {props.children}

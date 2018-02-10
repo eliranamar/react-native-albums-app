@@ -18,7 +18,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Header text="Lior's favorite music albums!" />
+        <Header text="Smooth's favorite music albums!" />
         <AlbumList />
       </View>
     );

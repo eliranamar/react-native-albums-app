@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 
 import { Card } from '../Card';
 import { CardSection } from '../CardSection';
-import { Button } from "../Button";
+import { Button } from '../Button';
 
 const styles = {
   headerContentStyle:      {
@@ -32,7 +32,7 @@ const styles = {
 };
 
 export const AlbumDetails = ({ album }) => {
-  const { title, artist, thumbnail_image, image } = album;
+  const { title, artist, thumbnail_image, image, url } = album;
 
   return (
     <Card>
@@ -57,7 +57,12 @@ export const AlbumDetails = ({ album }) => {
       </CardSection>
 
       <CardSection>
-        <Button />
+        <Button
+          onPress={() => {
+            Linking.openURL(url);
+          }}
+          text="Buy Now"
+        />
       </CardSection>
     </Card>
   );

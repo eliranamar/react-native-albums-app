@@ -15,7 +15,7 @@ const styles = {
 };
 
 export const CardSection = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <View style={styles.containerStyle}>
       {props.children}
@@ -24,5 +24,5 @@ export const CardSection = (props) => {
 };
 
 CardSection.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
 };
